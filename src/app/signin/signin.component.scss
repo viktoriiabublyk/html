@@ -1,0 +1,135 @@
+@import '_color';
+
+.signin {
+  h1 {
+      font-size: 30px;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-align: center;
+  }
+
+  .signin__form {
+    padding: 30px;
+    border: 1px solid #eef0f1;
+
+    .signin__form_item {
+
+      .item__title {
+        font-weight: 700;
+        font-size: 15px;
+        margin-bottom: 6px;
+
+        .item__title_forgot {
+          color: #7c7c7c;
+          text-decoration: underline;
+          font-weight: 400;
+          font-size: 14px;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+
+      & ::ng-deep {
+        .mat-form-field {
+          display: block;
+        }
+
+        .mat-checkbox-label {
+          font-family: "Circe", sans-serif !important;
+          font-weight: 400;
+        }
+
+        .mat-checkbox-frame {
+          border-width: 1px;
+        }
+      }
+
+      &.signin__form_submit {
+        margin: 15px 0;
+        padding: 10px;
+        color: #474747;
+
+        & ::ng-deep {
+          .mat-primary {
+            width: 100%;
+            display: block;
+            color: $text-color;
+            font-family: "Circe", sans-serif !important;
+          }
+        }
+      }
+
+      &.signin__form_social {
+        text-align: center;
+        padding: 10px 0 14px 0;
+        border-top: 1px solid #eef0f1;
+        border-bottom: 1px solid #eef0f1;
+
+        .social-title {
+          font-size: 15px;
+          font-weight: 700;
+          margin-bottom: 8px;
+        }
+
+        .social-items__item {
+          width: 42px;
+          height: 42px;
+          border-radius: 100%;
+          border: 2px solid #c3c3c3;
+          padding: 3px;
+          cursor: pointer;
+
+          & ::ng-deep {
+            .svg-inline--fa {
+              vertical-align: -0.425em;
+              width: 1.025em;
+              height: 1.4em;
+
+              path {
+                fill: #c3c3c3;
+              }
+            }
+          }
+
+          &:hover {
+            border-color: $brand-color;
+
+            & ::ng-deep {
+              .svg-inline--fa {
+                path {
+                  fill: $brand-color;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &.signin__form_register {
+        margin-top: 15px;
+        padding: 10px;
+        color: #474747;
+        text-align: center;
+
+        .register-title {
+          font-size: 15px;
+          font-weight: 700;
+          margin-bottom: 8px;
+        }
+
+        & ::ng-deep {
+          .mat-primary {
+            width: 100%;
+            display: block;
+            color: $text-color;
+            font-family: "Circe", sans-serif !important;
+          }
+        }
+      }
+    }
+
+
+  }
+}

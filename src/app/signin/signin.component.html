@@ -1,0 +1,48 @@
+<div class="container" fxLayout="row" fxLayoutAlign="center center">
+  <div class="signin"  fxFlex="25" fxFlex.md="40" fxFlex.lt-md="70">
+    <h1>Sign In</h1>
+    <div class="signin__form">
+      <div class="signin__form_item">
+        <div class="item__title">Email</div>
+        <mat-form-field>
+          <mat-label>Email</mat-label>
+          <input matInput>
+        </mat-form-field>
+      </div>
+
+      <div class="signin__form_item">
+        <div class="item__title" fxLayout="row" fxLayoutAlign="space-between center">
+          <div class="item__title_label">Password</div>
+          <a class="item__title_forgot">Forgot password?</a>
+        </div>
+        <mat-form-field >
+          <mat-label>Password</mat-label>
+          <input matInput>
+        </mat-form-field>
+      </div>
+
+      <div class="signin__form_item" fxLayoutAlign="center center">
+        <mat-checkbox [(ngModel)]="keepMeSignedIn">Keep me signed in</mat-checkbox>
+      </div>
+
+      <div class="signin__form_item signin__form_submit" fxLayoutAlign="center center">
+        <button mat-stroked-button color="primary">Sing In <mat-icon>vpn_key_outlined</mat-icon></button>
+      </div>
+
+      <div class="signin__form_item signin__form_social">
+        <div class="social-title">More sign in options</div>
+        <div class="social-items" fxLayoutAlign="space-between center">
+            <div class="social-items__item" fxLayoutAlign="center center"><fa-icon [icon]="faFacebook"></fa-icon></div>
+            <div class="social-items__item" fxLayoutAlign="center center"><fa-icon [icon]="faTwitter"></fa-icon></div>
+            <div class="social-items__item" fxLayoutAlign="center center"><fa-icon [icon]="faInstagram"></fa-icon></div>
+            <div class="social-items__item" fxLayoutAlign="center center"><fa-icon [icon]="faLinkedin"></fa-icon></div>
+          </div>
+      </div>
+
+      <div class="signin__form_item signin__form_register">
+        <div class="register-title">New user?</div>
+        <button mat-stroked-button color="primary">Create your account <mat-icon>lock_open</mat-icon></button>
+      </div>
+    </div>
+  </div>
+</div>

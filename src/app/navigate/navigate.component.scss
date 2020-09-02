@@ -1,0 +1,22 @@
+@import '_color';
+
+.navigation {
+  padding: 18px 0;
+
+  .navigation__item {
+    padding: 0 10px;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    a {
+      color: $brand-color;
+      font-weight: 700;
+    }
+
+    &.navigation__item_active a {
+      color: #2b2a28;
+    }
+  }
+}

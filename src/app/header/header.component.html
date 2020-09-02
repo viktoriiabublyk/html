@@ -1,0 +1,141 @@
+<header class="header">
+  <div class="header-topbar">
+    <div class="container">
+      <div fxLayout="row" fxLayoutAlign="space-between center">
+        <div>
+          <mat-icon fxShow fxHide.gt-md>menu</mat-icon>
+        </div>
+        <div class="header-menu" fxLayout="row" fxHide fxShow.gt-md>
+          <div class="header-menu__item"><a routerLink="/about-us">About us</a></div>
+          <div class="header-menu__item"><a routerLink="/help">Help</a></div>
+          <div class="header-menu__item"><a routerLink="/jobs">Jobs</a></div>
+          <div class="header-menu__item"><a routerLink="/stores">Stores</a></div>
+          <div class="header-menu__item"><a routerLink="/contact-us">Contact us</a></div>
+          <div class="header-menu__item"><a routerLink="/security">Security &amp; Privacy</a></div>
+        </div>
+
+        <div class="header-panel" fxLayout="row">
+          <div class="header-panel__item header-panel__login" fxLayoutAlign="space-start center">
+            <mat-icon>lock_open</mat-icon>
+            <div fxHide.xs ><a>Login</a>&nbsp; or &nbsp;<a>Register</a></div>
+          </div>
+          <div class="header-panel__item header-panel__favorite" fxLayoutAlign="space-start center">
+            <a><mat-icon>favorite_border</mat-icon></a>
+          </div>
+          <div class="header-panel__item header-panel__language" fxLayout="row" fxLayoutAlign="space-between center">
+            <mat-form-field appearance="fill">
+              <mat-select [(value)]="selectedLanguage">
+                <mat-select-trigger>
+                  <div class="language-item">
+                    <i class="language-item__icon language-icon__{{selectedLanguage}}"></i>
+                    <span fxShow fxHide.xs> {{selectedLanguage}}</span>
+                  </div>
+                </mat-select-trigger>
+                <mat-option *ngFor="let language of languages" [value]="language.value">
+                  <div class="language-item">
+                    <i class="language-item__icon language-icon__{{language.value}}"></i> {{language.viewValue}
+                  </div>
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="header-main" fxLayout="column" fxLayout.gt-md="row" fxLayoutAlign="space-between center">
+      <div class="header-main__logo" fxFlex="20" fxFlex.sm="grow">
+        <img src="/assets/logo.png" alt="logo">
+      </div>
+
+      <div class="header-main-right" fxLayoutAlign="space-between center" fxFlex="75" fxFlex.lt-sm="100" fxLayout.lt-sm="column">
+        <div class="header-main__search" fxFlex.lt-md="70" fxFlex.lt-sm="100">
+          <div class="search-wrapper">
+            <input type="text" placeholder="Search">
+            <div class="header-main__search__categories" fxLayout="row" fxLayoutAlign="space-between center">
+              <span>All Categories</span>
+              <mat-icon>expand_more</mat-icon>
+            </div>
+          </div>
+        </div>
+
+        <div class="header-main__contact" fxFlex.lt-md="20" fxLayout="row" fxLayoutAlign="space-between center">
+          <div class="header-main__call-us" fxFlex.lt-md="45">
+            <div class="call-us-wrapper" fxLayout="row" fxLayoutAlign="space-between center">
+              <mat-icon>phone_in_talk</mat-icon>
+              <div class="call-us-wrapper__item" fxHide fxShow.gt-md>
+                <div class="call-us-wrapper__item-title">Call us now</div>
+                <div class="call-us-wrapper__item-phone">(080) 123 4567 891</div>
+              </div>
+            </div>
+          </div>
+          <div class="header-main__basket" fxFlex.lt-md="45">
+            <div class="basket-wrapper" fxLayout="row" fxLayoutAlign="space-between center">
+              <mat-icon class="basket-icon__basket">local_mall</mat-icon>
+              <div class="basket-wrapper__content" fxHide fxShow.gt-md>
+                <div class="basket-wrapper__title">Basket:</div>
+                <div class="basket-wrapper__info">$124</div>
+              </div>
+
+              <mat-icon class="basket-icon__more">expand_more</mat-icon>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="main-menu-small-wrapper" fxLayoutAlign="center center">
+      <div class="main-menu-small" fxShow fxHide.gt-md  fxLayoutAlign="space-center center">
+        <mat-icon>menu</mat-icon>
+        <span>Categories</span>
+      </div>
+    </div>
+
+    <div class="main-menu" fxHide fxHide.gt-md="">
+      <div fxLayout="row" fxLayoutAlign="space-between">
+        <div class="main-menu__item">
+          <a>Shoes</a>
+        </div>
+        <div class="main-menu__item">
+          <a>Clothing</a>
+        </div>
+        <div class="main-menu__item">
+          <a>Bags</a>
+        </div>
+        <div class="main-menu__item">
+          <a>Accessories</a>
+        </div>
+        <div class="main-menu__item">
+          <a>Women`s</a>
+        </div>
+        <div class="main-menu__item">
+          <a>Men`s</a>
+        </div>
+        <div class="main-menu__item">
+          <a>Kids`</a>
+        </div>
+        <div class="main-menu__item">
+          <a>Clearance</a>
+        </div>
+        <div class="main-menu__item">
+          <a>Brands</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+
+
+
+
+
+
